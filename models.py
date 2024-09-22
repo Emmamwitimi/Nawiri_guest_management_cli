@@ -33,3 +33,6 @@ class Booking(Base):
     check_out = Column(DateTime, nullable=False)
     guest = relationship("Guest")
     room = relationship("Room")
+# Create the engine and tables
+engine = create_engine('sqlite:///nawiri.db')
+Base.metadata.create_all(engine)
