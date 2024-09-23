@@ -36,7 +36,7 @@ def view_guests():
     guests = session.query(Guest).all()
     for guest in guests:
         click.echo(f"{guest.id}: {guest.name}, {guest.email}")
-    session.close()
+    
 
 @cli.command()
 def add_room():
